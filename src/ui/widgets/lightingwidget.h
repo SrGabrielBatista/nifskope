@@ -1,12 +1,15 @@
 #ifndef LIGHTINGWIDGET_H
 #define LIGHTINGWIDGET_H
 
+
+///Mod copy from https://github.com/niftools/nifskope/pull/147/commits/30954e7f01f3d779a2a1fd37d363e8a6ad560bd3
 #include <QWidget>
+#include <QAction>
 
 #include <memory>
 
 class GLView;
-class QAction;
+
 
 namespace Ui {
 class LightingWidget;
