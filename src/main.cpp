@@ -46,6 +46,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QUdpSocket>
 #include <QUrl>
 #include <cstdio>
+bool OnlyFix = 0;
 
 QCoreApplication * createApplication( int &argc, char *argv[] )
 {
