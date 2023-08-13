@@ -89,7 +89,7 @@ namespace nstheme
 	enum WindowTheme { ThemeDark, ThemeLight, ThemeWindows, ThemeWindowsXP };
 	enum ToolbarSize { ToolbarSmall, ToolbarLarge };
 }
-
+extern bool OnlyFix;
 
 //! @file nifskope.h NifSkope, IPCsocket
 
