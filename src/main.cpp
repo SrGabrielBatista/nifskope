@@ -37,6 +37,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "model/kfmmodel.h"
 
 #include <QApplication>
+#include <QtGlobal>
 #include <QCommandLineParser>
 #include <QDesktopServices>
 #include <QDir>
@@ -44,10 +45,15 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QStack>
 #include <QUdpSocket>
 #include <QUrl>
-
+#include <cstdio>
 
 QCoreApplication * createApplication( int &argc, char *argv[] )
 {
+
+	if (!qstrcmp( qgetenv("NIFFIX"), "1" )){
+		OnlyFix = 1;
+		std::printf("NIFFIX MOD ENABLE\n");
+	}
 	// Iterate over args
 	for ( int i = 1; i < argc; ++i ) {
 		// -no-gui: start as core app without all the GUI overhead
