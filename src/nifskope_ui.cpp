@@ -73,7 +73,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QToolBar>
 #include <QToolButton>
 #include <QWidgetAction>
-
+#include <cstdio>
 #include <QProcess>
 #include <QStyleFactory>
 #include <QRegularExpression>
@@ -700,6 +700,7 @@ QWidget * NifSkope::filePathWidget( QWidget * parent )
 		} else {
 			navigateToFilepath->hide();
 		}
+		if (OnlyFix)NifSkope::save();
 	} );
 
 	// Change Filepath on successful NIF save
@@ -712,6 +713,10 @@ QWidget * NifSkope::filePathWidget( QWidget * parent )
 		} else {
 			navigateToFilepath->hide();
 		}
+		if (OnlyFix){
+			std::printf("SAVE\n");
+			QApplication::closeAllWindows();
+		};
 	} );
 
 	// Navigate to NIF in Explorer
