@@ -34,6 +34,15 @@ For information about development:
 
 ### Miscellaneous
 
+## Build without QtCreator
+
+cd nifskope
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -makefile -o Makefile "CONFIG+=release"  NifSkope.pro
+make
+
+maybe
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -makefile -o Makefile "CONFIG+=release" --prefix=INSTALL  NifSkope.pro
+
 Refer to these other documents in your installation folder or at the links provided:
 
 ## [TROUBLESHOOTING](https://github.com/niftools/nifskope/blob/develop/TROUBLESHOOTING.md)
