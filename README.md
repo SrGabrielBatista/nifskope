@@ -35,10 +35,11 @@ For information about development:
 ### Miscellaneous
 
 ## Build without QtCreator
-
+```
 cd nifskope
 /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -makefile -o Makefile "CONFIG+=release"  NifSkope.pro
 make
+```
 
 maybe
 /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -makefile -o Makefile "CONFIG+=release" --prefix=INSTALL  NifSkope.pro
